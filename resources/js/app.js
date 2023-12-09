@@ -1,7 +1,6 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+import foobar from './foobar';
+document.addEventListener('alpine:init', () => {
+    window.Alpine.data('foobar', foobar);
+});
